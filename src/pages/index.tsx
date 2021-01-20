@@ -1,11 +1,12 @@
-import { useContext } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { APP_CONTEXT } from '@/constants';
 import { fetchApi, groupDataByCities } from '@/utils';
-
+import { ActionType } from '@/context/actions';
 import styles from '../styles/Home.module.css';
+import { DataMap } from '@/models';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchApi();
@@ -20,13 +21,24 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  const dataMap = groupDataByCities(data);
-
   const { state, dispatch } = useContext(APP_CONTEXT);
 
-  console.log('DataMap: ', dataMap);
-  console.log('state: ', state);
-  console.log('dispatch: ', dispatch);
+  const initializeDataMap = useCallback(
+    (dataMap: DataMap) => {
+      dispatch({
+        type: ActionType.INITIALIZE_DATA_MAP,
+        payload: dataMap,
+      });
+    },
+    [dispatch]
+  );
+
+  useEffect(() => {
+    const dataMap = groupDataByCities(data);
+    initializeDataMap(dataMap);
+  }, [initializeDataMap, data]);
+
+  console.log(state);
 
   return (
     <div className={styles.container}>
