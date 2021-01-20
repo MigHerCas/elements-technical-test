@@ -1,9 +1,8 @@
+import { DataMap } from './../models/index';
 import { DataRecord, CityTemperatureRecord } from '@/models';
 
-export default function groupDataByCities(
-  data: Array<DataRecord>
-): Map<string, Array<CityTemperatureRecord>> {
-  const dataMap = new Map<string, Array<CityTemperatureRecord>>();
+export default function groupDataByCities(data: Array<DataRecord>): DataMap {
+  const dataMap = new Map() as DataMap;
 
   data.map((dataEntry) => {
     const cityName = dataEntry.city.name.toLowerCase();
