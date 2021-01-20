@@ -1,5 +1,5 @@
 import { Dispatch } from 'react';
-import { Action } from '@/actions';
+import { AnyAction } from '@/actions';
 
 // Api models
 type TemperatureUnit = 'C' | 'F' | 'K';
@@ -31,5 +31,5 @@ export interface AppState {
 // App context
 export interface AppContext {
   state: AppState;
-  dispatch: Dispatch<Action>;
+  dispatch: Dispatch<AnyAction>;
 }
