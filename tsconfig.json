@@ -4,6 +4,9 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/constants": ["src/global/constants"],
+      "@/models": ["src/global/models"],
+      "@/hooks/*": ["src/global/hooks/*"],
+      "@/utils/*": ["src/global/utils/*"],
     },
     "allowJs": true,
     "alwaysStrict": true,
