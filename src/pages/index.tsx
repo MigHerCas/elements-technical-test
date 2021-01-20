@@ -1,8 +1,10 @@
-import fetchApi from '@/utils/fetchApi';
-import groupDataByCities from '@/utils/groupDataByCities';
+import { useContext } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { APP_CONTEXT } from '@/constants';
+import { fetchApi, groupDataByCities } from '@/utils';
+
 import styles from '../styles/Home.module.css';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -19,7 +21,12 @@ export default function Home({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   const dataMap = groupDataByCities(data);
-  console.log(dataMap);
+
+  const { state, dispatch } = useContext(APP_CONTEXT);
+
+  console.log('DataMap: ', dataMap);
+  console.log('state: ', state);
+  console.log('dispatch: ', dispatch);
 
   return (
     <div className={styles.container}>
