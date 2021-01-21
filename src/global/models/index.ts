@@ -27,12 +27,14 @@ export type DataMap = Map<LocationName, Array<TemperatureRecord>>;
 export type ImageMap = Map<LocationName, string>;
 export type VisibleLocationsSet = Set<LocationName>;
 export type HiddenLocationsSet = Set<LocationName>;
+export type Theme = 'Dark' | 'Light';
 
 export interface AppState {
   visibleLocationsSet: VisibleLocationsSet;
   hiddenLocationsSet: HiddenLocationsSet;
   dataMap: DataMap;
   imageMap: ImageMap;
+  theme: Theme;
 }
 
 // App context

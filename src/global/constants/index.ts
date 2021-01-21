@@ -14,7 +14,8 @@ export const INITIAL_STATE: AppState = {
   hiddenLocationsSet: new Set() as HiddenLocationsSet,
   dataMap: new Map() as DataMap,
   imageMap: new Map() as ImageMap,
+  theme: 'Light',
 };
 
-// App context
+// App context creation
 export const APP_CONTEXT = createContext({} as AppContext);

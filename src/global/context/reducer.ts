@@ -1,6 +1,12 @@
-import { ActionType, AnyAction, ToggleLocationAction, InitializeMapsAction } from '@/actions';
+import {
+  ActionType,
+  AnyAction,
+  ToggleLocationAction,
+  InitializeMapsAction,
+  ToggleThemeAction,
+} from '@/actions';
 import type { AppState, VisibleLocationsSet, HiddenLocationsSet } from '@/models';
-import switchLocation from '../utils/switchLocation';
+import { switchLocation } from '@/utils';
 
 function reducer(state: AppState, action: AnyAction): AppState {
   const clonedLocationSets = {
@@ -29,7 +35,11 @@ function reducer(state: AppState, action: AnyAction): AppState {
         hiddenLocationsSet,
         visibleLocationsSet,
       };
-
+    case ActionType.TOGGLE_THEME:
+      return {
+        ...state,
+        theme: (action as ToggleThemeAction).payload === 'Dark' ? 'Light' : 'Dark',
+      };
     default:
       return state;
   }
