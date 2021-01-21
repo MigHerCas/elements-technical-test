@@ -6,7 +6,7 @@ type TemperatureUnit = 'C' | 'F' | 'K';
 
 export interface DataRecord {
   city: {
-    name: string;
+    name: LocationName;
     picture: string;
   };
   date: string;
@@ -14,18 +14,23 @@ export interface DataRecord {
   tempType: TemperatureUnit;
 }
 
-export interface CityTemperatureRecord {
+export interface TemperatureRecord {
   date: string;
   temp: number;
   tempType: TemperatureUnit;
 }
 
+type LocationName = string;
+
 // App state
-export type DataMap = Map<string, Array<CityTemperatureRecord>>;
+export type DataMap = Map<LocationName, Array<TemperatureRecord>>;
+export type ImageMap = Map<LocationName, string>;
 
 export interface AppState {
-  hiddenCities: Array<string>;
+  visibleLocations: Array<LocationName>;
+  hiddenLocations: Array<LocationName>;
   dataMap: DataMap;
+  imageMap: ImageMap;
 }
 
 // App context
