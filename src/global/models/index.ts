@@ -35,6 +35,7 @@ export interface AppState {
   dataMap: DataMap;
   imageMap: ImageMap;
   theme: Theme;
+  initialized: boolean;
 }
 
 // App context

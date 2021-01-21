@@ -15,6 +15,7 @@ export const INITIAL_STATE: AppState = {
   dataMap: new Map() as DataMap,
   imageMap: new Map() as ImageMap,
   theme: 'Light',
+  initialized: false,
 };
 
 // App context creation

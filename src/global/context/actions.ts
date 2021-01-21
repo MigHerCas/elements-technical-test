@@ -1,4 +1,4 @@
-import type { DataMap, ImageMap, LocationName, Theme } from '@/models';
+import type { DataMap, ImageMap, LocationName } from '@/models';
 
 // Actions enum. This ensures not to dispatch any misspelled action
 export enum ActionType {
@@ -23,10 +23,6 @@ export interface InitializeMapsAction extends Action {
   };
 }
 
-export interface ToggleThemeAction extends Action {
-  payload: Theme;
-}
-
 // Set of all different actions used in this app.
 // *** Add every action type here ***
-export type AnyAction = InitializeMapsAction | ToggleLocationAction | ToggleThemeAction;
+export type AnyAction = Action | InitializeMapsAction | ToggleLocationAction;

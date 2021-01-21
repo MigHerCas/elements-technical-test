@@ -37,10 +37,12 @@ export default function Home({
   );
 
   useEffect(() => {
-    const dataMap = getTemperatureRecords(data);
-    const imageMap = getImages(data);
-    initializeMaps(dataMap, imageMap);
-  }, [initializeMaps, data]);
+    if (!state.initialized) {
+      const dataMap = getTemperatureRecords(data);
+      const imageMap = getImages(data);
+      initializeMaps(dataMap, imageMap);
+    }
+  }, [initializeMaps, data, state.initialized]);
 
   console.log(state);
 
