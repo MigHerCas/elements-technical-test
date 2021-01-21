@@ -1,5 +1,7 @@
 import getTemperatureRecords from './getTemperatureRecords';
 import getImages from './getImages';
 import fetchApi from './fetchApi';
+import switchLocation from './switchLocation';
 
-export { fetchApi, getTemperatureRecords, getImages };
+// *** Add every utils function here ***
+export { fetchApi, getTemperatureRecords, getImages, switchLocation };

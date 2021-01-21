@@ -1,9 +1,9 @@
-import { DataMap, ImageMap } from '@/models';
+import type { DataMap, ImageMap, LocationName } from '@/models';
 
 // Actions enum. This ensures not to dispatch any misspelled action
 export enum ActionType {
   INITIALIZE_MAPS = 'INITIALIZE_MAPS',
-  HIDE_LOCATION = 'HIDE_LOCATION',
+  TOGGLE_LOCATION = 'TOGGLE_LOCATION',
 }
 
 // Actions types
@@ -11,8 +11,8 @@ export interface Action {
   type: ActionType;
 }
 
-export interface HideLocationAction extends Action {
-  payload: string; // Name of the city to hide
+export interface ToggleLocationAction extends Action {
+  payload: LocationName; // Name of the city to hide
 }
 
 export interface InitializeMapsAction extends Action {
@@ -24,4 +24,4 @@ export interface InitializeMapsAction extends Action {
 
 // Set of all different actions used in this app.
 // *** Add every action type here ***
-export type AnyAction = InitializeMapsAction | HideLocationAction;
+export type AnyAction = InitializeMapsAction | ToggleLocationAction;

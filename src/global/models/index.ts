@@ -20,15 +20,17 @@ export interface TemperatureRecord {
   tempType: TemperatureUnit;
 }
 
-type LocationName = string;
+export type LocationName = string;
 
 // App state
 export type DataMap = Map<LocationName, Array<TemperatureRecord>>;
 export type ImageMap = Map<LocationName, string>;
+export type VisibleLocationsSet = Set<LocationName>;
+export type HiddenLocationsSet = Set<LocationName>;
 
 export interface AppState {
-  visibleLocations: Array<LocationName>;
-  hiddenLocations: Array<LocationName>;
+  visibleLocationsSet: VisibleLocationsSet;
+  hiddenLocationsSet: HiddenLocationsSet;
   dataMap: DataMap;
   imageMap: ImageMap;
 }

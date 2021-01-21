@@ -1,10 +1,17 @@
 import { createContext } from 'react';
-import { AppState, DataMap, AppContext, ImageMap } from '@/models';
+import type {
+  AppState,
+  DataMap,
+  AppContext,
+  ImageMap,
+  HiddenLocationsSet,
+  VisibleLocationsSet,
+} from '@/models';
 
 // Initial app state
 export const INITIAL_STATE: AppState = {
-  visibleLocations: [],
-  hiddenLocations: [],
+  visibleLocationsSet: new Set() as VisibleLocationsSet,
+  hiddenLocationsSet: new Set() as HiddenLocationsSet,
   dataMap: new Map() as DataMap,
   imageMap: new Map() as ImageMap,
 };

@@ -1,7 +1,13 @@
-import { ActionType, AnyAction, HideLocationAction, InitializeMapsAction } from '@/actions';
-import type { AppState } from '@/models';
+import { ActionType, AnyAction, ToggleLocationAction, InitializeMapsAction } from '@/actions';
+import type { AppState, VisibleLocationsSet, HiddenLocationsSet } from '@/models';
+import switchLocation from '../utils/switchLocation';
 
 function reducer(state: AppState, action: AnyAction): AppState {
+  const clonedLocationSets = {
+    hiddenLocationsSet: new Set(state.hiddenLocationsSet) as HiddenLocationsSet,
+    visibleLocationsSet: new Set(state.visibleLocationsSet) as VisibleLocationsSet,
+  };
+
   switch (action.type) {
     case ActionType.INITIALIZE_MAPS:
       return {
@@ -9,11 +15,21 @@ function reducer(state: AppState, action: AnyAction): AppState {
         dataMap: (action as InitializeMapsAction).payload.dataMap,
         imageMap: (action as InitializeMapsAction).payload.imageMap,
       };
-    case ActionType.HIDE_LOCATION:
+
+    case ActionType.TOGGLE_LOCATION:
+      // eslint-disable-next-line no-case-declarations
+      const { hiddenLocationsSet, visibleLocationsSet } = switchLocation(
+        (action as ToggleLocationAction).payload,
+        clonedLocationSets.hiddenLocationsSet,
+        clonedLocationSets.visibleLocationsSet
+      );
+
       return {
         ...state,
-        hiddenLocations: [...state.hiddenLocations, (action as HideLocationAction).payload],
+        hiddenLocationsSet,
+        visibleLocationsSet,
       };
+
     default:
       return state;
   }
