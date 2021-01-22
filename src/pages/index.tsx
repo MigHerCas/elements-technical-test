@@ -1,12 +1,11 @@
-import React, { useCallback, useContext, useEffect } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 import { APP_CONTEXT } from '@/constants';
 import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
 import { ActionType } from '@/context/actions';
 import type { DataMap, ImageMap } from '@/models';
-import Layout from '@/components/Layout';
+import { AppLayout } from '@/components';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchApi();
@@ -47,12 +46,7 @@ export default function Home({
   console.log(state);
 
   return (
-    <Layout>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <AppLayout>
       <main>
         <Link href="/city">
           <a>DataRecord</a>
@@ -61,6 +55,6 @@ export default function Home({
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
       </main>
-    </Layout>
+    </AppLayout>
   );
 }

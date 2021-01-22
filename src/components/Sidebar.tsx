@@ -1,4 +1,4 @@
-import ElementsLogoBig from '../public/icons/elements.svg';
+import ElementsLogoBig from '../../public/icons/elements.svg';
 
 const Sidebar = (): JSX.Element => {
   return (

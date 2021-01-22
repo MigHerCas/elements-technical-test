@@ -3,8 +3,8 @@ import { APP_CONTEXT } from '@/constants';
 import { ActionType } from '@/context/actions';
 
 // Icons
-import Logo from '../public/icons/logo.svg';
-import Lantern from '../public/icons/lantern.svg';
+import Logo from '../../public/icons/logo.svg';
+import Lantern from '../../public/icons/lantern.svg';
 
 const Header = (): JSX.Element => {
   const { dispatch } = useContext(APP_CONTEXT);

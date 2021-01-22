@@ -1,4 +1,4 @@
-import ElementsLogoSmall from '../public/icons/elements_sm.svg';
+import ElementsLogoSmall from '../../public/icons/elements_sm.svg';
 
 const Footer = (): JSX.Element => {
   return (

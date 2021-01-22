@@ -2,10 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["src/components/*"],
+      "@/components": ["src/components"],
       "@/constants": ["src/global/constants"],
       "@/models": ["src/global/models"],
-      "@/hooks/*": ["src/global/hooks/*"],
       "@/utils": ["src/global/utils"],
       "@/context/*": ["src/global/context/*"],
       "@/actions": ["src/global/context/actions"],
