@@ -3,19 +3,22 @@
   --color-white: #ffffff;
 
   // Light theme as default
-  --primary-color: #3638de;
-  --secondary-color: var(--color-white);
-  --tertiary-color: #eeeeee;
+  --color-primary: #3638de;
+  --color-secondary: var(--color-white);
+  --color-tertiary: #eeeeee;
+  --color-opposite: #333333;
 }
 
-body.dark-theme {
-  --primary-color: #ffb100;
-  --secondary-color: #333333;
-  --tertiary-color: #3f3e3e;
+.app-layout.dark-theme {
+  --color-primary: #ffb100;
+  --color-secondary: #333333;
+  --color-tertiary: #3f3e3e;
+  --color-opposite: #ffffff;
 }
 
-body.light-theme {
-  --primary-color: #3638de;
-  --secondary-color: var(--color-white);
-  --tertiary-color: #eeeeee;
+.app-layout.light-theme {
+  --color-primary: #3638de;
+  --color-secondary: var(--color-white);
+  --color-tertiary: #eeeeee;
+  --color-opposite: #333333;
 }

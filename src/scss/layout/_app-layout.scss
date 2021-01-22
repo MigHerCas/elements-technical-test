@@ -1,0 +1,13 @@
+.app-layout {
+  padding: 3rem;
+  min-height: 100vh;
+  background-color: var(--color-secondary);
+
+  @media (min-width: $tablet) {
+    padding: 4.5rem 6rem;
+  }
+}
+
+main {
+  padding-top: 6rem; // header height
+}
