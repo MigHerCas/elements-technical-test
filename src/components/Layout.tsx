@@ -1,8 +1,11 @@
-import Logo from '../../public/icons/logo.svg';
-import Lantern from '../../public/icons/lantern.svg';
 import { useContext } from 'react';
 import { APP_CONTEXT } from '@/constants';
 import { ActionType } from '@/context/actions';
+
+// Icons
+import Logo from '../../public/icons/logo.svg';
+import Lantern from '../../public/icons/lantern.svg';
+import ElementsFooterLogo from '../../public/icons/elements_sm.svg';
 
 interface Props {
   children: React.ReactNode;
@@ -31,6 +34,9 @@ const Layout = ({ children }: Props): JSX.Element => {
         </div>
       </header>
       {children}
+      <footer className="footer">
+        <ElementsFooterLogo className="footer__elements-logo" />
+      </footer>
     </div>
   );
 };
