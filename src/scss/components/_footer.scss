@@ -1,0 +1,22 @@
+.footer {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+
+  @media (min-width: $tablet) {
+    right: 6rem;
+    bottom: 4.5rem;
+  }
+
+  @media (min-width: $desktop-xs) {
+    display: none;
+  }
+}
+
+.footer__elements-logo {
+  transform-origin: top left;
+
+  path {
+    fill: var(--color-opposite);
+  }
+}

@@ -7,6 +7,11 @@ header.header {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+
+  @media (min-width: $tablet) {
+    left: 6rem;
+    right: 6rem;
+  }
 }
 
 .logo {
@@ -53,6 +58,12 @@ header.header {
 
       @media (min-width: $mobile) {
         height: 6.5rem;
+      }
+
+      @media (min-width: $tablet) {
+        height: 7rem;
+        right: -6.2rem;
+        width: calc(100% + 8rem);
       }
 
       @media (min-width: $desktop-xs) {
