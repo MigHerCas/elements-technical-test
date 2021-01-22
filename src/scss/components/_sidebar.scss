@@ -6,14 +6,12 @@
   }
 
   display: inline-flex;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 8.5rem;
   background-color: var(--color-primary);
-  left: 0;
-  top: 0;
-  height: 100%;
 }
 
 .sidebar__logo {

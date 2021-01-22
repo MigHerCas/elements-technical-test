@@ -34,10 +34,24 @@
 
     grid-template-columns:
       [sidebar-start] 8.5rem [sidebar-end]
-      minmax(auto, 10rem) [content-start] 1fr
+      minmax(auto, 6rem) [content-start] 1fr
       [content-end] minmax(4.5rem, auto) [main-end];
 
     grid-template-areas: $desktop-xs-area;
+  }
+
+  @media (min-width: $desktop-m) {
+    grid-template-columns:
+      [sidebar-start] 8.5rem [sidebar-end]
+      minmax(auto, 8rem) [content-start] 1fr
+      [content-end] minmax(4.5rem, auto) [main-end];
+  }
+
+  @media (min-width: $desktop-l) {
+    grid-template-columns:
+      [sidebar-start] 10rem [sidebar-end]
+      minmax(auto, 10rem) [content-start] 1fr
+      [content-end] minmax(4.5rem, auto) [main-end];
   }
 }
 
