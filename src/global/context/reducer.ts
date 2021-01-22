@@ -3,6 +3,8 @@ import type { AppState, VisibleLocationsSet, HiddenLocationsSet } from '@/models
 import { switchLocation } from '@/utils';
 
 function reducer(state: AppState, action: AnyAction): AppState {
+  // In order to keep the inmutability principle Redux, we clone the existing maps
+  // to avoid side effects => pure function
   const clonedLocationSets = {
     hiddenLocationsSet: new Set(state.hiddenLocationsSet) as HiddenLocationsSet,
     visibleLocationsSet: new Set(state.visibleLocationsSet) as VisibleLocationsSet,
