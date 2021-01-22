@@ -1,13 +1,51 @@
 .app-layout {
+  position: relative;
   padding: 3rem;
   min-height: 100vh;
   background-color: var(--color-secondary);
+  max-width: 160rem;
+
+  // Dealing with background and max-width
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--color-secondary);
+    z-index: -1;
+  }
 
   @media (min-width: $tablet) {
     padding: 4.5rem 6rem;
   }
+
+  @media (min-width: $desktop-xs) {
+    padding: 0;
+    display: grid;
+    grid-template-rows:
+      [main-row-start] 4.5rem
+      [header-row-start] 6rem
+      [header-row-end spacer-row-start] 3rem
+      [spacer-row-end content-row-start] 1fr
+      [content-row-end] 4.5rem
+      [main-row-end];
+
+    grid-template-columns:
+      [sidebar-start] 8.5rem [sidebar-end]
+      minmax(auto, 10rem) [content-start] 1fr
+      [content-end] minmax(4.5rem, auto) [main-end];
+
+    grid-template-areas: $desktop-xs-area;
+  }
 }
 
 main {
+  grid-area: main;
   padding-top: 6rem; // header height
+
+  @media (min-width: $desktop-xs) {
+    padding-top: 0;
+  }
 }

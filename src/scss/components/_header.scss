@@ -1,4 +1,5 @@
 header.header {
+  grid-area: header;
   position: fixed;
   left: 3rem;
   right: 3rem;
@@ -11,6 +12,10 @@ header.header {
   @media (min-width: $tablet) {
     left: 6rem;
     right: 6rem;
+  }
+
+  @media (min-width: $desktop-xs) {
+    position: static;
   }
 }
 
@@ -37,7 +42,7 @@ header.header {
     position: relative;
     height: 4rem;
     border-radius: 50%;
-    border: 2px solid var(--color-opposite);
+    border: 3px solid var(--color-opposite);
     cursor: pointer;
     outline: none;
 
