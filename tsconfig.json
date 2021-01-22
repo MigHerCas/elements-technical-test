@@ -31,5 +31,5 @@
     "target": "esnext",
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "src/server/server.js"]
+  "include": ["**/*.ts", "**/*.tsx", "src/server/server.js", "src/custom.d.ts"]
 }
