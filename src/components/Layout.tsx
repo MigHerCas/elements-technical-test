@@ -5,7 +5,8 @@ import { ActionType } from '@/context/actions';
 // Icons
 import Logo from '../../public/icons/logo.svg';
 import Lantern from '../../public/icons/lantern.svg';
-import ElementsFooterLogo from '../../public/icons/elements_sm.svg';
+import ElementsLogoBig from '../../public/icons/elements.svg';
+import ElementsLogoSmall from '../../public/icons/elements_sm.svg';
 
 interface Props {
   children: React.ReactNode;
@@ -33,9 +34,12 @@ const Layout = ({ children }: Props): JSX.Element => {
           </button>
         </div>
       </header>
+      <aside className="sidebar">
+        <ElementsLogoBig className="sidebar__logo" />
+      </aside>
       {children}
       <footer className="footer">
-        <ElementsFooterLogo className="footer__elements-logo" />
+        <ElementsLogoSmall className="footer__elements-logo" />
       </footer>
     </div>
   );
