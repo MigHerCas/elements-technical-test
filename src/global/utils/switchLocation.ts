@@ -1,14 +1,14 @@
-import type { LocationName, VisibleLocationsSet, HiddenLocationsSet } from '@/models';
+import type { LocationName, LocationSet } from '@/models';
 
 type FunctionReturns = {
-  hiddenLocationsSet: HiddenLocationsSet;
-  visibleLocationsSet: VisibleLocationsSet;
+  hiddenLocationsSet: LocationSet;
+  visibleLocationsSet: LocationSet;
 };
 
 export default function switchLocation(
   locationName: LocationName,
-  hiddenLocationsSet: HiddenLocationsSet,
-  visibleLocationsSet: VisibleLocationsSet
+  hiddenLocationsSet: LocationSet,
+  visibleLocationsSet: LocationSet
 ): FunctionReturns {
   const isVisible = visibleLocationsSet.has(locationName);
 

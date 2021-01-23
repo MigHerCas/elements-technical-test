@@ -1,11 +1,10 @@
 import { useCallback, useContext, useEffect } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import Link from 'next/link';
 import { APP_CONTEXT } from '@/constants';
 import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
 import { ActionType } from '@/actions';
 import type { DataMap, ImageMap } from '@/models';
-import { AppLayout } from '@/components';
+import { AppLayout, LocationsList } from '@/components';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchApi();
@@ -20,6 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
+  // TODO: abstract this logic inside App
   const { state, dispatch } = useContext(APP_CONTEXT);
 
   const initializeMaps = useCallback(
@@ -48,12 +48,7 @@ export default function Home({
   return (
     <AppLayout>
       <main>
-        <Link href="/city">
-          <a>DataRecord</a>
-        </Link>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <LocationsList locations={state.visibleLocationsSet} />
       </main>
     </AppLayout>
   );

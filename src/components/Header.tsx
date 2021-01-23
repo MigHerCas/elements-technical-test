@@ -19,7 +19,7 @@ const Header = (): JSX.Element => {
     <header className="header">
       <div className="logo">
         <Logo className="logo__icon" />
-        <span className="logo__span">Weather</span>
+        <h1 className="logo__heading">Weather</h1>
       </div>
       <div className="theme-toggle">
         <button className="theme-toggle__button" onClick={() => toggleTheme()}>
