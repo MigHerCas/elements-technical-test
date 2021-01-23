@@ -37,6 +37,7 @@ header.header {
 
 .theme-toggle {
   @extend .image-wrapper;
+  z-index: 20;
 
   .theme-toggle__button {
     position: relative;

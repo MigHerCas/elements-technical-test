@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header, Footer, Sidebar, AppWrapper } from '@/components';
+import { Header, Footer, Sidebar, AppWrapper, BackgroundShape } from '@/components';
 
 interface Props {
   children: React.ReactNode;
@@ -15,6 +15,7 @@ const Layout = ({ children }: Props): JSX.Element => {
       <Sidebar />
       {children}
       <Footer />
+      <BackgroundShape />
     </AppWrapper>
   );
 };

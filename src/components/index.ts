@@ -6,5 +6,6 @@ import AppWrapper from './layout/AppWrapper';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import BackgroundShape from './BackgroundShape';
 
-export { AppLayout, AppWrapper, Header, Sidebar, Footer };
+export { AppLayout, AppWrapper, Header, Sidebar, Footer, BackgroundShape };

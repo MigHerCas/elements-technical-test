@@ -1,0 +1,50 @@
+.background-shape {
+  @extend .image-wrapper;
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  clip-path: url('../../../public/icons/elements-shape.svg#backgroundClip');
+  -webkit-clip-path: url('#backgroundClip');
+  background-image: var(--background-gradient);
+  right: -20rem;
+  bottom: -10%;
+  width: 70rem;
+
+  @media (min-width: $tablet) {
+    width: 80rem;
+    right: -24.46%;
+    bottom: -12.81%;
+  }
+
+  @media (min-width: $desktop-xs) {
+    width: 90rem;
+    bottom: -9.86%;
+    right: -25.83%;
+  }
+
+  @media (min-width: $desktop-s) {
+    right: -30%;
+    bottom: -9.86%;
+    width: 105rem;
+  }
+
+  @media (min-width: $desktop-m) {
+    right: -25.83%;
+    bottom: -9.86%;
+  }
+
+  @media (min-width: $desktop-l) {
+    width: 120rem;
+    bottom: -20%;
+    right: -20%;
+  }
+
+  @media (min-width: $desktop-xl) {
+    width: 140rem;
+    bottom: -30%;
+    right: -25%;
+  }
+}
+
+.background-shape__icon {
+}

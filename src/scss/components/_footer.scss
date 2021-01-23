@@ -2,6 +2,7 @@
   position: fixed;
   right: 3rem;
   bottom: 3rem;
+  z-index: 20;
 
   @media (min-width: $tablet) {
     right: 6rem;
