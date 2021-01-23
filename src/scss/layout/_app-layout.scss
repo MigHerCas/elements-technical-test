@@ -63,5 +63,6 @@ main {
 
   @media (min-width: $desktop-xs) {
     padding-top: 0;
+    overflow: hidden;
   }
 }
