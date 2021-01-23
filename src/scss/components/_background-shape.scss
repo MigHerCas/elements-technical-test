@@ -1,8 +1,6 @@
 .background-shape {
   @extend .image-wrapper;
   position: fixed;
-  background-size: cover;
-  background-position: center;
   clip-path: url('../../../public/icons/elements-shape.svg#backgroundClip');
   -webkit-clip-path: url('#backgroundClip');
   background-image: var(--background-gradient);
@@ -44,6 +42,11 @@
     bottom: -30%;
     right: -25%;
   }
+}
+
+.background-shape--with-image {
+  background-size: cover;
+  background-position: center;
 }
 
 .background-shape__icon {

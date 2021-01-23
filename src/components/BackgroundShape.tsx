@@ -1,6 +1,18 @@
-const BackgroundShape = (): JSX.Element => {
+interface Props {
+  image?: string;
+}
+
+const BackgroundShape = ({ image = '' }: Props): JSX.Element => {
+  const style = {
+    backgroundImage: `url(${image})`,
+  };
+
+  // TODO: overlap shapes and fade first one
   return (
-    <div className="background-shape">
+    <div
+      className={`background-shape ${image.length ? 'background-shape--with-image' : ''}`}
+      style={image.length ? style : {}}
+    >
       <svg
         className="background-shape__icon"
         fill="none"
