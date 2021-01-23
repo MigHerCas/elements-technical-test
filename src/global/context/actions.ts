@@ -3,6 +3,7 @@ import type { DataMap, ImageMap, LocationName } from '@/models';
 // Actions enum. This ensures not to dispatch any misspelled action
 export enum ActionType {
   INITIALIZE_MAPS = 'INITIALIZE_MAPS',
+  INITIALIZE_SETS = 'INITIALIZE_SETS',
   TOGGLE_LOCATION = 'TOGGLE_LOCATION',
   TOGGLE_THEME = 'TOGGLE_THEME',
 }

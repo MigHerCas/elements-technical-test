@@ -1,13 +1,13 @@
 import { ActionType, AnyAction, ToggleLocationAction, InitializeMapsAction } from '@/actions';
-import type { AppState, VisibleLocationsSet, HiddenLocationsSet } from '@/models';
+import type { AppState, LocationSet } from '@/models';
 import { switchLocation } from '@/utils';
 
 function reducer(state: AppState, action: AnyAction): AppState {
   // In order to keep the inmutability principle Redux, we clone the existing maps
   // to avoid side effects => pure function
   const clonedLocationSets = {
-    hiddenLocationsSet: new Set(state.hiddenLocationsSet) as HiddenLocationsSet,
-    visibleLocationsSet: new Set(state.visibleLocationsSet) as VisibleLocationsSet,
+    hiddenLocationsSet: new Set(state.hiddenLocationsSet) as LocationSet,
+    visibleLocationsSet: new Set(state.visibleLocationsSet) as LocationSet,
   };
 
   switch (action.type) {
@@ -16,6 +16,9 @@ function reducer(state: AppState, action: AnyAction): AppState {
         ...state,
         dataMap: (action as InitializeMapsAction).payload.dataMap,
         imageMap: (action as InitializeMapsAction).payload.imageMap,
+
+        // TODO: initialize sets from localstorage by default + improve sorting logic
+        visibleLocationsSet: new Set((action as InitializeMapsAction).payload.dataMap.keys()),
         initialized: true,
       };
 
