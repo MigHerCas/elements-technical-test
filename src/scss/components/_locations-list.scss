@@ -11,9 +11,88 @@
 }
 
 .location-item {
+  position: relative;
   cursor: pointer;
   box-shadow: var(--box-shadow);
   border-radius: $border-radius;
+}
+
+.location-item__front-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: $border-radius;
+
+  // Overlay
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    opacity: 0.6;
+    border-radius: $border-radius;
+  }
+}
+
+.location-item__hover-layer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  border-radius: $border-radius;
+  background-color: var(--color-primary);
+
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  svg {
+    width: 5.5rem;
+    path {
+      fill: var(--color-primary);
+    }
+  }
+
+  span {
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+}
+
+.location-item__toggle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+
+  svg {
+    z-index: 1;
+    width: 3.5rem;
+
+    path {
+      fill: var(--color-primary);
+    }
+  }
 }
 
 .location-item__back-layer {
