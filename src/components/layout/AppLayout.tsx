@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Layout = ({ children, locationImage = '' }: Props): JSX.Element => {
-  console.log(locationImage);
   return (
     <AppWrapper>
       <Head>

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { APP_CONTEXT } from '@/constants';
-import { ActionType } from '@/context/actions';
+import { ActionType } from '@/actions';
 
 // Icons
 import Logo from '../../public/icons/logo.svg';

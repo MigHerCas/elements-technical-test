@@ -6,7 +6,7 @@
       "@/constants": ["src/global/constants"],
       "@/models": ["src/global/models"],
       "@/utils": ["src/global/utils"],
-      "@/context/*": ["src/global/context/*"],
+      "@/context": ["src/global/context"],
       "@/actions": ["src/global/context/actions"],
     },
     "allowJs": true,

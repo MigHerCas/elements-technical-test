@@ -3,7 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import { APP_CONTEXT } from '@/constants';
 import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
-import { ActionType } from '@/context/actions';
+import { ActionType } from '@/actions';
 import type { DataMap, ImageMap } from '@/models';
 import { AppLayout } from '@/components';
 
