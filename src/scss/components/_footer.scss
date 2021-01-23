@@ -1,11 +1,11 @@
 .footer {
   position: fixed;
-  right: 3rem;
+  left: 3rem;
   bottom: 3rem;
   z-index: 20;
 
   @media (min-width: $tablet) {
-    right: 6rem;
+    left: 4.5em;
     bottom: 4.5rem;
   }
 
