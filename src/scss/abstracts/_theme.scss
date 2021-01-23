@@ -1,13 +1,13 @@
 :root {
   // Neutral
   --color-white: #ffffff;
+  --box-shadow: 0px 4px 30px -5px rgba(0, 0, 0, 0.3);
 
   // Light theme as default
   --color-primary: #3638de;
   --color-secondary: var(--color-white);
   --color-tertiary: #eeeeee;
   --color-opposite: #333333;
-
   --background-gradient: radial-gradient(36.63% 36.63% at 44.52% 50%, #202147 0%, #3638de 100%);
 }
 

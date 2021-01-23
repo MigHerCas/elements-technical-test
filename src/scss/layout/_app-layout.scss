@@ -57,7 +57,9 @@
 
 main {
   grid-area: main;
-  padding-top: 6rem; // header height
+  position: relative;
+  z-index: 1;
+  padding-top: 10rem; // header height + 4rem spacing
 
   @media (min-width: $desktop-xs) {
     padding-top: 0;

@@ -8,6 +8,7 @@ header.header {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  z-index: 20;
 
   @media (min-width: $tablet) {
     left: 4.5rem;
@@ -27,10 +28,8 @@ header.header {
     margin-right: 1.5rem;
   }
 
-  .logo__span {
-    display: inline-block;
+  .logo__heading {
     font-size: 4rem;
-    color: var(--color-opposite);
     font-weight: 700;
   }
 }
@@ -55,7 +54,7 @@ header.header {
       content: '';
       position: absolute;
       top: 50%;
-      right: -3.2rem;
+      right: -3.5rem;
       width: calc(100% + 5rem);
       height: 6rem;
       background-color: var(--color-primary);
