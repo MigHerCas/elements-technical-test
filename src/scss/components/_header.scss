@@ -17,6 +17,7 @@ header.header {
 
   @media (min-width: $desktop-xs) {
     position: static;
+    overflow: hidden;
   }
 }
 

@@ -56,7 +56,7 @@
 }
 
 main {
-  overflow: hidden; // to avoid overflow from sliders
+  overflow: hidden; // to prevent overflow from sliders
   grid-area: main;
   position: relative;
   z-index: 1;

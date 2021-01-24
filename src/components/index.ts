@@ -9,8 +9,9 @@ import Sidebar from './Sidebar';
 import BackgroundShape from './BackgroundShape';
 import LocationsList from './LocationsList';
 import LocationItem from './LocationItem';
+import Forecast from './Forecast';
 
-// Add every component here for improved importing
+// *** Add every component here for improved importing ***
 export {
   AppLayout,
   AppWrapper,
@@ -20,4 +21,5 @@ export {
   BackgroundShape,
   LocationsList,
   LocationItem,
+  Forecast,
 };

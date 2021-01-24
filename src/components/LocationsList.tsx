@@ -33,7 +33,7 @@ const LocationsList = ({ hiddenList = false }: Props): JSX.Element => {
   };
 
   return (
-    <div className="locations-list-container">
+    <section className="locations-list-container">
       <h2 className="locations-list__heading">{hiddenList ? 'Hidden' : 'Visible'} locations</h2>
       <Swiper
         spaceBetween={20}
@@ -62,7 +62,7 @@ const LocationsList = ({ hiddenList = false }: Props): JSX.Element => {
           );
         })}
       </Swiper>
-    </div>
+    </section>
   );
 };
 
