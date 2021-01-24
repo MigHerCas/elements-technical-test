@@ -1,7 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { LocationName } from '@/models';
-import { fetchApi } from '@/utils';
+import { capitalizeTerm, fetchApi } from '@/utils';
 import { AppLayout, Forecast } from '@/components';
+import { APP_CONTEXT } from '@/constants';
+import { useContext } from 'react';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
@@ -31,9 +33,10 @@ interface Props {
 }
 
 export default function LocationDetail({ location }: Props): JSX.Element {
-  // We need: image (imageMap), dataMap
+  const { state } = useContext(APP_CONTEXT);
+  const locationImage = state.imageMap.get(capitalizeTerm(location.name.toLowerCase()));
   return (
-    <AppLayout>
+    <AppLayout locationImage={locationImage}>
       <Forecast locationName={location.name} />
     </AppLayout>
   );

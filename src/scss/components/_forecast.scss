@@ -41,11 +41,12 @@
   display: inline-flex;
   align-items: center;
   flex-direction: column;
+  flex: 1 0 24rem;
   padding: 2.5rem;
   gap: 2.5rem;
   background-color: var(--color-secondary);
   color: var(--color-opposite);
-  font-weight: 600;
+  font-weight: 700;
   border-radius: $border-radius;
   margin-right: 2rem;
 
@@ -55,7 +56,7 @@
   }
 
   span.hour {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 
   span.temperature {
@@ -64,12 +65,13 @@
   }
 
   span.date {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
 
 // Necessary for having right padding spacing on scroll container
 .forecast-content__item--spacer {
+  flex: 0;
   padding: 1rem;
   margin-right: 0;
   background-color: transparent;

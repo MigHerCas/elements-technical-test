@@ -1,14 +1,17 @@
 interface Props {
   isSpacer?: boolean;
+  temperature?: number;
+  hour?: string;
+  date?: string;
 }
 
-const ForecastItem = ({ isSpacer = false }: Props): JSX.Element => {
+const ForecastItem = ({ isSpacer = false, date, hour, temperature }: Props): JSX.Element => {
   if (isSpacer) return <li className="forecast-content__item forecast-content__item--spacer" />;
   return (
     <li className="forecast-content__item">
-      <span className="hour">2pm</span>
-      <span className="temperature">57g</span>
-      <span className="date">23/12</span>
+      <span className="hour">{hour}</span>
+      <span className="temperature">{temperature}°</span>
+      <span className="date">{date}</span>
     </li>
   );
 };
