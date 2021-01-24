@@ -1,3 +1,7 @@
+.locations-list-container {
+  margin-bottom: 4rem;
+}
+
 .locations-list__heading {
   font-weight: 700;
   font-size: 3rem;
@@ -11,13 +15,8 @@
   border-radius: $border-radius;
 }
 
-.location-item__front-layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  border-radius: $border-radius;
-
+.location-item--hidden {
+  cursor: pointer;
   // Overlay
   &::before {
     content: '';
@@ -27,10 +26,33 @@
     background-color: var(--color-secondary);
     opacity: 0.6;
     border-radius: $border-radius;
+    z-index: 1;
   }
 }
 
+.location-item--hidden:hover .location-item__hover-layer {
+  @media (min-width: $desktop-xs) {
+    opacity: 1;
+  }
+  cursor: pointer;
+}
+
+.location-item--hidden .location-item__toggle {
+  @media (min-width: $desktop-xs) {
+    display: none;
+  }
+}
+
+.location-item__front-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: $border-radius;
+}
+
 .location-item__hover-layer {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,6 +63,7 @@
   z-index: 5;
   border-radius: $border-radius;
   background-color: var(--color-primary);
+  transition: opacity 250ms ease-out;
 
   .icon-wrapper {
     display: flex;
@@ -78,6 +101,8 @@
   height: 5rem;
   border-radius: 50%;
   background-color: var(--color-secondary);
+  z-index: 5;
+  cursor: pointer;
 
   svg {
     z-index: 1;
@@ -105,6 +130,7 @@
   border-radius: $border-radius $border-radius 0 0;
 
   img {
+    object-fit: cover;
     border-radius: $border-radius $border-radius 0 0;
     height: 100%;
   }
