@@ -1,5 +1,5 @@
 import { ActionType } from '@/actions';
-import { AppLayout, LocationsList } from '@/components';
+import { AppLayout, LocationsSlider } from '@/components';
 import { APP_CONTEXT } from '@/constants';
 import type { DataMap, ImageMap } from '@/models';
 import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
@@ -47,8 +47,8 @@ export default function Home({
 
   return (
     <AppLayout>
-      <LocationsList />
-      <LocationsList hiddenList />
+      <LocationsSlider />
+      <LocationsSlider hiddenList />
     </AppLayout>
   );
 }

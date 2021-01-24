@@ -15,7 +15,7 @@ interface Props {
 // install Swiper components
 SwiperCore.use([A11y, Mousewheel]);
 
-const LocationsList = ({ hiddenList = false }: Props): JSX.Element => {
+const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
   const { dispatch, state } = useContext(APP_CONTEXT);
   const [sortedLocations, setSortedLocations] = useState<Array<LocationName>>();
 
@@ -66,4 +66,4 @@ const LocationsList = ({ hiddenList = false }: Props): JSX.Element => {
   );
 };
 
-export default LocationsList;
+export default LocationsSlider;
