@@ -1,0 +1,76 @@
+.forecast-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.forecast-header__arrow {
+  height: 3.5rem;
+  vertical-align: middle;
+
+  path {
+    stroke: var(--color-primary);
+  }
+}
+
+.forecast-header__heading {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (min-width: $tablet) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: $desktop-xs) {
+    font-size: 6.5rem;
+  }
+}
+
+.forecast-content {
+  position: relative;
+  display: flex;
+  padding: 2rem;
+  overflow-x: auto;
+  background-color: var(--color-tertiary);
+  border-radius: $border-radius;
+}
+
+.forecast-content__item {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem;
+  gap: 2.5rem;
+  background-color: var(--color-secondary);
+  color: var(--color-opposite);
+  font-weight: 600;
+  border-radius: $border-radius;
+  margin-right: 2rem;
+
+  &:nth-last-child(2) {
+    // Necessary for having right padding spacing on scroll container
+    margin-right: 0;
+  }
+
+  span.hour {
+    font-size: 2rem;
+  }
+
+  span.temperature {
+    font-size: 6rem;
+    color: var(--color-primary);
+  }
+
+  span.date {
+    font-size: 2.2rem;
+  }
+}
+
+// Necessary for having right padding spacing on scroll container
+.forecast-content__item--spacer {
+  padding: 1rem;
+  margin-right: 0;
+  background-color: transparent;
+}
