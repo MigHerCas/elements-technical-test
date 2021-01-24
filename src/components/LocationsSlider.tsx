@@ -34,7 +34,7 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
 
   return (
     <section className="locations-list-container">
-      <h2 className="locations-list__heading" data-aos="fade-up" data-aos-delay={200}>
+      <h2 className="locations-list__heading" data-aos="fade-up" data-aos-delay={500}>
         {hiddenList ? 'Hidden' : 'Visible'} locations
       </h2>
       <Swiper
@@ -43,25 +43,27 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
         breakpoints={SLIDER_BREAKPOINTS}
         wrapperTag="ol"
         className="locations-list"
-        // data-aos="zoom-out"
-        // data-aos-duration={600}
-        // data-aos-delay={1200}
       >
         {sortedLocations?.map((location) => {
           const locationImage = state.imageMap.get(location) || '';
 
           return (
-            <SwiperSlide
-              className={`slide location-item ${hiddenList ? 'location-item--hidden' : ''}`}
-              tag="li"
-              key={location}
-            >
-              <LocationItem
-                locationName={location}
-                locationImage={locationImage}
-                hiddenList={hiddenList}
-                handleToggleClick={handleToggleClick}
-              />
+            <SwiperSlide className="slide location-item" tag="li" key={location}>
+              <div
+                className={`location-item-wrapper ${
+                  hiddenList ? 'location-item-wrapper--hidden' : ''
+                }`}
+                data-aos="zoom-out"
+                data-aos-duration={400}
+                data-aos-delay={200}
+              >
+                <LocationItem
+                  locationName={location}
+                  locationImage={locationImage}
+                  hiddenList={hiddenList}
+                  handleToggleClick={handleToggleClick}
+                />
+              </div>
             </SwiperSlide>
           );
         })}

@@ -8,14 +8,13 @@
   margin-bottom: 2rem;
 }
 
-.location-item {
-  position: relative;
-  cursor: pointer;
+.location-item-wrapper {
   box-shadow: var(--box-shadow);
+  cursor: pointer;
   border-radius: $border-radius;
 }
 
-.location-item--hidden {
+.location-item-wrapper--hidden {
   cursor: pointer;
   // Overlay
   &::before {
@@ -30,14 +29,18 @@
   }
 }
 
-.location-item--hidden:hover .location-item__hover-layer {
+.location-item {
+  position: relative;
+}
+
+.location-item-wrapper--hidden:hover .location-item__hover-layer {
   @media (min-width: $desktop-xs) {
     opacity: 1;
   }
   cursor: pointer;
 }
 
-.location-item--hidden .location-item__toggle {
+.location-item-wrapper--hidden .location-item__toggle {
   @media (min-width: $desktop-xs) {
     display: none;
   }

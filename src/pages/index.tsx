@@ -19,7 +19,6 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  // TODO: abstract this logic inside App
   const { state, dispatch } = useContext(APP_CONTEXT);
 
   const initializeMaps = useCallback(

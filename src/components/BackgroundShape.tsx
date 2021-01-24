@@ -11,7 +11,7 @@ const BackgroundShape = ({ image = '' }: Props): JSX.Element => {
     <div
       className={`background-shape ${image.length ? 'background-shape--with-image' : ''}`}
       style={image.length ? style : {}}
-      data-aos="zoom-out"
+      data-aos="zoom-out-left"
       data-aos-duration={1200}
       data-aos-delay={1000}
     >
