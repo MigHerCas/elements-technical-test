@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { Header, Footer, Sidebar, AppWrapper, BackgroundShape } from '@/components';
 import { LocationName } from '@/models';
+import aos from 'aos';
 
 interface Props {
   children: React.ReactNode;
@@ -8,6 +10,12 @@ interface Props {
 }
 
 const Layout = ({ children, locationImage = '' }: Props): JSX.Element => {
+  useEffect(() => {
+    aos.init({
+      duration: 750,
+      delay: 100,
+    });
+  }, []);
   return (
     <AppWrapper>
       <Head>

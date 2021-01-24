@@ -1,17 +1,8 @@
-import aos from 'aos';
-import { useEffect } from 'react';
 import ElementsLogoBig from '../../public/icons/elements.svg';
 
 const Sidebar = (): JSX.Element => {
-  useEffect(() => {
-    aos.init({
-      duration: 600,
-      delay: 1000,
-    });
-  }, []);
-
   return (
-    <aside className="sidebar" data-aos="fade-right">
+    <aside className="sidebar" data-aos="fade-right" data-aos-duration={1200} data-aos-delay={1000}>
       <ElementsLogoBig className="sidebar__logo" />
     </aside>
   );

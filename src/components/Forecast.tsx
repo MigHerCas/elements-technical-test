@@ -1,11 +1,10 @@
 import { LocationName } from '@/models';
 import Link from 'next/link';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import ArrowBack from '../../public/icons/arrow-back.svg';
 import { ForecastItem } from '@/components';
 import { capitalizeTerm, processTemperatureRecords } from '@/utils';
 import { APP_CONTEXT } from '@/constants';
-import aos from 'aos';
 
 interface Props {
   locationName: LocationName;
@@ -17,17 +16,11 @@ const Forecast = ({ locationName }: Props): JSX.Element => {
 
   const processedTemperatureRecords = processTemperatureRecords(temperatureRecordsArray);
 
-  useEffect(() => {
-    aos.init({
-      duration: 500,
-    });
-  }, []);
-
   return (
     <section className="forecast">
       <div className="forecast-header">
         <Link href="/">
-          <a data-aos="fade-left">
+          <a data-aos="fade-left" data-aos-duration={500} data-aos-delay={2000}>
             <ArrowBack className="forecast-header__arrow" />
           </a>
         </Link>
@@ -35,7 +28,12 @@ const Forecast = ({ locationName }: Props): JSX.Element => {
           {capitalizeTerm(locationName)}
         </h1>
       </div>
-      <ol className="forecast-content">
+      <ol
+        className="forecast-content"
+        data-aos="fade-down"
+        data-aos-duration={400}
+        data-aos-delay={500}
+      >
         {processedTemperatureRecords.map(({ date, temp }, index) => {
           const dateObject = new Date(date);
           return (

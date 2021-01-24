@@ -1,6 +1,3 @@
-import aos from 'aos';
-import { useEffect } from 'react';
-
 interface Props {
   image?: string;
 }
@@ -10,18 +7,13 @@ const BackgroundShape = ({ image = '' }: Props): JSX.Element => {
     backgroundImage: `url(${image})`,
   };
 
-  useEffect(() => {
-    aos.init({
-      duration: 1500,
-      delay: 500,
-    });
-  }, []);
-
   return (
     <div
       className={`background-shape ${image.length ? 'background-shape--with-image' : ''}`}
       style={image.length ? style : {}}
-      data-aos="zoom-in"
+      data-aos="zoom-out"
+      data-aos-duration={1200}
+      data-aos-delay={1000}
     >
       <svg
         className="background-shape__icon"
