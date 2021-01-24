@@ -6,6 +6,8 @@ import { ActionType } from '@/actions';
 // Icons
 import Logo from '../../public/icons/logo.svg';
 import Lantern from '../../public/icons/lantern.svg';
+import RefreshIcon from '../../public/icons/refresh.svg';
+import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
 
 const Header = (): JSX.Element => {
   const { dispatch } = useContext(APP_CONTEXT);
@@ -13,6 +15,19 @@ const Header = (): JSX.Element => {
   const toggleTheme = (): void => {
     dispatch({
       type: ActionType.TOGGLE_THEME,
+    });
+  };
+
+  const refreshApp = async (): Promise<void> => {
+    console.log('♻️ ♻️ Restarting app! ♻️ ♻️');
+    const data = await fetchApi();
+
+    dispatch({
+      type: ActionType.INITIALIZE_MAPS,
+      payload: {
+        dataMap: getTemperatureRecords(data),
+        imageMap: getImages(data),
+      },
     });
   };
 
@@ -26,6 +41,9 @@ const Header = (): JSX.Element => {
           </div>
         </a>
       </Link>
+      <button className="refresh-button" onClick={async () => await refreshApp()}>
+        <RefreshIcon className="refresh-icon" />
+      </button>
       <div className="theme-toggle">
         <button className="theme-toggle__button" onClick={() => toggleTheme()}>
           <Lantern className="theme-toggle__icon" />

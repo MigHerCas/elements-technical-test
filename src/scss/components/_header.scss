@@ -39,6 +39,33 @@ header.header {
   }
 }
 
+.refresh-button {
+  @extend .image-wrapper;
+  margin-left: auto;
+  margin-right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--color-opposite);
+  background-color: var(--color-secondary);
+
+  @media (min-width: $tablet) {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.refresh-icon {
+  width: 2.3rem;
+  height: auto;
+  stroke: var(--color-opposite);
+
+  @media (min-width: $desktop-xs) {
+    width: 2.8rem;
+  }
+}
+
 .theme-toggle {
   @extend .image-wrapper;
   z-index: 20;

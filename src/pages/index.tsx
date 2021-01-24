@@ -39,11 +39,9 @@ export default function Home({
       const dataMap = getTemperatureRecords(data);
       const imageMap = getImages(data);
       initializeMaps(dataMap, imageMap);
+      console.log('🎬 🎬 Firing app! 🎬 🎬');
     }
   }, [initializeMaps, data, state.initialized]);
-
-  // I keep this to help the reviewer
-  console.log(state);
 
   return (
     <AppLayout>

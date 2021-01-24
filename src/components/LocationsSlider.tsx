@@ -34,7 +34,7 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
 
   return (
     <section className="locations-list-container">
-      <h2 className="locations-list__heading" data-aos="fade-up" data-aos-delay={500}>
+      <h2 className="locations-list__heading" data-aos="fade-in" data-aos-delay={500}>
         {hiddenList ? 'Hidden' : 'Visible'} locations
       </h2>
       <Swiper

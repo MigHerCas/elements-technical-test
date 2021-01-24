@@ -59,6 +59,7 @@ export default function LocationDetail({ location, data }: Props): JSX.Element {
       const dataMap = getTemperatureRecords(data);
       const imageMap = getImages(data);
       initializeMaps(dataMap, imageMap);
+      console.log('🎬 🎬 Firing app! 🎬 🎬');
     }
   }, [initializeMaps, data, state.initialized]);
 

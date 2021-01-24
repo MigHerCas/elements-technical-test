@@ -19,6 +19,7 @@ function reducer(state: AppState, action: AnyAction): AppState {
 
         // TODO: initialize sets from localstorage by default + improve sorting logic
         visibleLocationsSet: new Set((action as InitializeMapsAction).payload.dataMap.keys()),
+        hiddenLocationsSet: new Set() as LocationSet,
         initialized: true,
       };
 
