@@ -36,7 +36,7 @@ const LocationItem = ({
       <button className="location-item__toggle" onClick={() => handleToggleClick(locationName)}>
         {hiddenList ? <Eye /> : <EyeCrossed />}
       </button>
-      <Link href={`/${locationName?.toLowerCase()}`}>
+      <Link href="/location/[name]" as={`/location/${locationName?.toLowerCase()}`}>
         <div className="location-item__back-layer">
           <div className="location-item__image">
             <Image layout="fill" src={locationImage} />

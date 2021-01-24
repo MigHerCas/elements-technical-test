@@ -1,10 +1,10 @@
-import { useCallback, useContext, useEffect } from 'react';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { APP_CONTEXT } from '@/constants';
-import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
 import { ActionType } from '@/actions';
-import type { DataMap, ImageMap } from '@/models';
 import { AppLayout, LocationsList } from '@/components';
+import { APP_CONTEXT } from '@/constants';
+import type { DataMap, ImageMap } from '@/models';
+import { fetchApi, getImages, getTemperatureRecords } from '@/utils';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useCallback, useContext, useEffect } from 'react';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchApi();
@@ -47,10 +47,8 @@ export default function Home({
 
   return (
     <AppLayout>
-      <main>
-        <LocationsList />
-        <LocationsList hiddenList />
-      </main>
+      <LocationsList />
+      <LocationsList hiddenList />
     </AppLayout>
   );
 }

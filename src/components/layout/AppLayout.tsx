@@ -15,7 +15,7 @@ const Layout = ({ children, locationImage = '' }: Props): JSX.Element => {
       </Head>
       <Header />
       <Sidebar />
-      {children}
+      <main>{children}</main>
       <Footer />
       <BackgroundShape image={locationImage} />
     </AppWrapper>
