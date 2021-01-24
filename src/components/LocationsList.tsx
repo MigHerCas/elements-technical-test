@@ -1,17 +1,12 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { ActionType } from '@/actions';
 import { LocationName } from '@/models';
-import Link from 'next/link';
-import Image from 'next/image';
 import { APP_CONTEXT, SLIDER_BREAKPOINTS } from '@/constants';
+import { LocationItem } from '@/components';
 
 // import Swiper core and required components
 import SwiperCore, { A11y, Mousewheel } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Icons
-import Eye from '../../public/icons/eye.svg';
-import EyeCrossed from '../../public/icons/eye-crossed.svg';
-import { ActionType } from '@/actions';
 
 interface Props {
   hiddenList?: boolean;
@@ -57,30 +52,12 @@ const LocationsList = ({ hiddenList = false }: Props): JSX.Element => {
               tag="li"
               key={location}
             >
-              {hiddenList && (
-                <button
-                  className="location-item__hover-layer"
-                  onClick={() => handleToggleClick(location)}
-                >
-                  <div className="icon-wrapper">
-                    <Eye />
-                  </div>
-                  <span>Show</span>
-                </button>
-              )}
-              <button className="location-item__toggle" onClick={() => handleToggleClick(location)}>
-                {hiddenList ? <Eye /> : <EyeCrossed />}
-              </button>
-              <Link href={`/${location?.toLowerCase()}`}>
-                <div className="location-item__back-layer">
-                  <div className="location-item__image">
-                    <Image layout="fill" src={locationImage} />
-                  </div>
-                  <div className="location-item__name">
-                    <span>{location}</span>
-                  </div>
-                </div>
-              </Link>
+              <LocationItem
+                locationName={location}
+                locationImage={locationImage}
+                hiddenList={hiddenList}
+                handleToggleClick={handleToggleClick}
+              />
             </SwiperSlide>
           );
         })}
