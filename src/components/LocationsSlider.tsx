@@ -43,7 +43,6 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
         className="locations-list"
       >
         {sortedLocations?.map((location) => {
-          console.log(location);
           const locationImage = state.imageMap.get(location) || '';
 
           return (

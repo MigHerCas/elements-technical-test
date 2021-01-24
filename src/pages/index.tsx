@@ -43,6 +43,7 @@ export default function Home({
     }
   }, [initializeMaps, data, state.initialized]);
 
+  // I keep this to help the reviewer
   console.log(state);
 
   return (
