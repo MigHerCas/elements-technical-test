@@ -15,14 +15,15 @@ export const INITIAL_STATE: AppState = {
 export const APP_CONTEXT = createContext({} as AppContext);
 
 export const SLIDER_BREAKPOINTS = {
-  // when window width is <= 499px
-  499: {
+  450: {
     slidesPerView: 1.4,
   },
   600: {
+    slidesPerView: 1.7,
+  },
+  700: {
     slidesPerView: 2.2,
   },
-  // when window width is <= 999px
   900: {
     slidesPerView: 2.4,
   },

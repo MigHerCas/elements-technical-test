@@ -48,7 +48,8 @@ export default function Home({
   return (
     <AppLayout>
       <main>
-        <LocationsList locations={state.visibleLocationsSet} />
+        <LocationsList />
+        <LocationsList hiddenList />
       </main>
     </AppLayout>
   );

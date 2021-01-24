@@ -4,7 +4,7 @@ export default function getImages(data: Array<DataRecord>): ImageMap {
   const imageMap = new Map() as ImageMap;
 
   data.map((dataEntry) => {
-    const cityName = dataEntry.city.name.toLowerCase();
+    const cityName = dataEntry.city.name;
     if (imageMap.has(cityName)) return;
 
     // Stores city picture
