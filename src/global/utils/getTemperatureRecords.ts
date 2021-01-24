@@ -1,7 +1,6 @@
 import type { DataRecord, TemperatureRecord, DataMap } from '@/models';
 
 export default function getTemperatureRecords(data: Array<DataRecord>): DataMap {
-  // TODO: add array to sort them first
   const dataMap = new Map() as DataMap;
 
   data.map((dataEntry) => {

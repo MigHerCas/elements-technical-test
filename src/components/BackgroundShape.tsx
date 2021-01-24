@@ -1,3 +1,6 @@
+import aos from 'aos';
+import { useEffect } from 'react';
+
 interface Props {
   image?: string;
 }
@@ -7,11 +10,18 @@ const BackgroundShape = ({ image = '' }: Props): JSX.Element => {
     backgroundImage: `url(${image})`,
   };
 
-  // TODO: overlap shapes and fade first one
+  useEffect(() => {
+    aos.init({
+      duration: 1500,
+      delay: 500,
+    });
+  }, []);
+
   return (
     <div
       className={`background-shape ${image.length ? 'background-shape--with-image' : ''}`}
       style={image.length ? style : {}}
+      data-aos="zoom-in"
     >
       <svg
         className="background-shape__icon"

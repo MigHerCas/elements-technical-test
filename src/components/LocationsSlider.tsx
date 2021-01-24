@@ -7,6 +7,7 @@ import { LocationItem } from '@/components';
 // import Swiper core and required components
 import SwiperCore, { A11y, Mousewheel } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import aos from 'aos';
 
 interface Props {
   hiddenList?: boolean;
@@ -18,6 +19,13 @@ SwiperCore.use([A11y, Mousewheel]);
 const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
   const { dispatch, state } = useContext(APP_CONTEXT);
   const [sortedLocations, setSortedLocations] = useState<Array<LocationName>>();
+
+  useEffect(() => {
+    aos.init({
+      duration: 500,
+      debounceDelay: 750,
+    });
+  }, []);
 
   useEffect(() => {
     setSortedLocations(
@@ -51,12 +59,14 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
               tag="li"
               key={location}
             >
-              <LocationItem
-                locationName={location}
-                locationImage={locationImage}
-                hiddenList={hiddenList}
-                handleToggleClick={handleToggleClick}
-              />
+              <div data-aos="fade-up">
+                <LocationItem
+                  locationName={location}
+                  locationImage={locationImage}
+                  hiddenList={hiddenList}
+                  handleToggleClick={handleToggleClick}
+                />
+              </div>
             </SwiperSlide>
           );
         })}

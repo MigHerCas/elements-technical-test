@@ -35,6 +35,7 @@ interface Props {
 export default function LocationDetail({ location }: Props): JSX.Element {
   const { state } = useContext(APP_CONTEXT);
   const locationImage = state.imageMap.get(capitalizeTerm(location.name.toLowerCase()));
+
   return (
     <AppLayout locationImage={locationImage}>
       <Forecast locationName={location.name} />
