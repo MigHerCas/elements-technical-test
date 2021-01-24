@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useContext } from 'react';
 import { APP_CONTEXT } from '@/constants';
 import { ActionType } from '@/actions';
@@ -17,10 +18,14 @@ const Header = (): JSX.Element => {
 
   return (
     <header className="header">
-      <div className="logo">
-        <Logo className="logo__icon" />
-        <h1 className="logo__heading">Weather</h1>
-      </div>
+      <Link href="/">
+        <a className="logo-link">
+          <div className="logo">
+            <Logo className="logo__icon" />
+            <h1 className="logo__heading">Weather</h1>
+          </div>
+        </a>
+      </Link>
       <div className="theme-toggle">
         <button className="theme-toggle__button" onClick={() => toggleTheme()}>
           <Lantern className="theme-toggle__icon" />

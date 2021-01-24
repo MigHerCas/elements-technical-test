@@ -20,6 +20,10 @@ header.header {
   }
 }
 
+.logo-link {
+  @extend .image-wrapper;
+}
+
 .logo {
   display: inline-flex;
   align-items: center;
