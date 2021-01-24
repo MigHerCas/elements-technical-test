@@ -1,10 +1,13 @@
 import { LocationName } from '@/models';
 import Link from 'next/link';
+import React from 'react';
 import ArrowBack from '../../public/icons/arrow-back.svg';
+import { ForecastItem } from '@/components';
 
 interface Props {
   locationName: LocationName;
 }
+
 const Forecast = ({ locationName }: Props): JSX.Element => {
   return (
     <section className="forecast">
@@ -17,32 +20,12 @@ const Forecast = ({ locationName }: Props): JSX.Element => {
         <h1 className="forecast-header__heading">{locationName}</h1>
       </div>
       <ol className="forecast-content">
-        <li className="forecast-content__item">
-          <span className="hour">2pm</span>
-          <span className="temperature">57g</span>
-          <span className="date">23/12</span>
-        </li>
-        <li className="forecast-content__item">
-          <span className="hour">2pm</span>
-          <span className="temperature">57g</span>
-          <span className="date">23/12</span>
-        </li>
-        <li className="forecast-content__item">
-          <span className="hour">2pm</span>
-          <span className="temperature">57g</span>
-          <span className="date">23/12</span>
-        </li>
-        <li className="forecast-content__item">
-          <span className="hour">2pm</span>
-          <span className="temperature">57g</span>
-          <span className="date">23/12</span>
-        </li>
-        <li className="forecast-content__item">
-          <span className="hour">2pm</span>
-          <span className="temperature">57g</span>
-          <span className="date">23/12</span>
-        </li>
-        <li className="forecast-content__item forecast-content__item--spacer"></li>
+        <ForecastItem />
+        <ForecastItem />
+        <ForecastItem />
+        <ForecastItem />
+        <ForecastItem />
+        <ForecastItem isSpacer />
       </ol>
     </section>
   );

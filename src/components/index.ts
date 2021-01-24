@@ -10,6 +10,7 @@ import BackgroundShape from './BackgroundShape';
 import LocationsList from './LocationsList';
 import LocationItem from './LocationItem';
 import Forecast from './Forecast';
+import ForecastItem from './ForecastItem';
 
 // *** Add every component here for improved importing ***
 export {
@@ -22,4 +23,5 @@ export {
   LocationsList,
   LocationItem,
   Forecast,
+  ForecastItem,
 };
