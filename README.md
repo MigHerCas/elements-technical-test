@@ -1,3 +1,5 @@
+## Documentation is about to be finished... 🔨
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Own design using Figma: [link](https://www.figma.com/file/V6iTcUUcfUGp2iKcIhTqFQ/Elements)
