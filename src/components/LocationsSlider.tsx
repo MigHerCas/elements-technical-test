@@ -33,19 +33,19 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
   };
 
   return (
-    <section
-      className="locations-list-container"
-      data-aos="fade-left"
-      data-aos-duration={600}
-      data-aos-delay={600}
-    >
-      <h2 className="locations-list__heading">{hiddenList ? 'Hidden' : 'Visible'} locations</h2>
+    <section className="locations-list-container">
+      <h2 className="locations-list__heading" data-aos="fade-out" data-aos-delay={400}>
+        {hiddenList ? 'Hidden' : 'Visible'} locations
+      </h2>
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
         breakpoints={SLIDER_BREAKPOINTS}
         wrapperTag="ol"
         className="locations-list"
+        data-aos="fade-left"
+        data-aos-duration={600}
+        data-aos-delay={550}
       >
         {sortedLocations?.map((location) => {
           const locationImage = state.imageMap.get(location) || '';
