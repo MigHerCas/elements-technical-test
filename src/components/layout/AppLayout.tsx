@@ -15,6 +15,7 @@ const Layout = ({ children, locationImage = '' }: Props): JSX.Element => {
       duration: 750,
       delay: 100,
     });
+    aos.refresh();
   }, []);
   return (
     <AppWrapper>

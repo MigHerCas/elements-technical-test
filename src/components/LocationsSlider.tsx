@@ -33,10 +33,13 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
   };
 
   return (
-    <section className="locations-list-container">
-      <h2 className="locations-list__heading" data-aos="fade-in" data-aos-delay={500}>
-        {hiddenList ? 'Hidden' : 'Visible'} locations
-      </h2>
+    <section
+      className="locations-list-container"
+      data-aos="fade-left"
+      data-aos-duration={600}
+      data-aos-delay={600}
+    >
+      <h2 className="locations-list__heading">{hiddenList ? 'Hidden' : 'Visible'} locations</h2>
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
@@ -54,8 +57,8 @@ const LocationsSlider = ({ hiddenList = false }: Props): JSX.Element => {
                   hiddenList ? 'location-item-wrapper--hidden' : ''
                 }`}
                 data-aos="zoom-out"
-                data-aos-duration={400}
-                data-aos-delay={200}
+                data-aos-duration={500}
+                data-aos-delay={0}
               >
                 <LocationItem
                   locationName={location}

@@ -32,7 +32,7 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <header className="header">
+    <header className="header" data-aos="fade-down" data-aos-duration={1200} data-aos-delay={1000}>
       <Link href="/">
         <a className="logo-link">
           <div className="logo">

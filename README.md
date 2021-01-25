@@ -151,11 +151,11 @@ As this assessment allows to use as much time as desired, I've tried to build a 
 
 ## Things I am more proud of
 
-- Use of utils as the core of the project: this folder contains the most complex part of the project.
-- Use of Map and Set JS objects.
+- Usage of utils as the core of the project: this folder contains the most complex part of the project.
+- Usage of Map and Set JS objects.
 - Clip-path on background image.
 - More structured design
-- Nice theme switcher
+- Theme switcher
 - Redux-way app state management
 
 ## Author
