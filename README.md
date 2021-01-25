@@ -1,12 +1,12 @@
 <img src="https://assets.website-files.com/5cd40c117f1ff810bf42803b/5d2f00e046b3c5b7475d4b76_elements_logo_landscape_black_nospacing.svg" align="right"
      alt="Elements.nl logo" width="220" height="100">
-     
+
 # Elements Candidate Assignment - Frontend
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Pre-requisites 📋
-This project has been built with: 
+This project has been built with:
 
 - `yarn [1.22.4]`
 - `node [12.19.0]`
@@ -29,22 +29,9 @@ As .env variables are used within this project, you need to set them up.
 cp .env.sample .env.local
 ```
 
-Next.js has its own environment variables system, so you need to copy those variables within `next.config.js`
+This being done, there are only two remaing steps to have our application running 🚀:
 
-```js
-// File: next.js.config
-module.exports = {
-     ...
-     env: {
-       {VariableName}: {value},
-     }
-     ...
-}
-```
-
-This being done, there are only two remaing steps to have our application running 🚀: 
-
-[ Tab 1 ] 
+[ Tab 1 ]
 
 Init a [cors-anywhere](https://github.com/Rob--W/cors-anywhere) instance.
 
@@ -55,13 +42,15 @@ yarn run server
 ```
 [ Tab 2 ]
 
+Start Next.js in development mode.
+
 ```bash
 npm run dev
 # or
 yarn run dev
 ```
 
-You should now see something like this: 
+You should now see something like this:
 ```bash
 yarn run v1.22.4
 $ next dev
@@ -76,15 +65,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Design 🎨
 
-As I always try to bring my own value or touch to every project I work on, I decided to create my own Elements themed design. 
+As I always try to bring my own value or touch to every project I work on, I decided to create my own Elements themed design.
 
 _⚠️ Please note ⚠️:_
 
 _As this is not a real-life project, the design has established a serie of guidelines such as layout, colors and elements. During development phase, a few things have changed, so take it as a `sandbox` where I've projected my ideas while they were popping up._
 
-Built with Figma 
+Built with Figma
 
-[Design](https://www.figma.com/file/V6iTcUUcfUGp2iKcIhTqFQ/Elements) 
+[Design](https://www.figma.com/file/V6iTcUUcfUGp2iKcIhTqFQ/Elements)
 
 ## Documentation 📖
 
@@ -98,7 +87,7 @@ Built with Figma
 | Pre-commit hooks  | `Husky - Lint-staged`  |
 | External libraries  | `Swiper -  AOS - cors-anywhere`  |
 
-Now more in depth: 
+Now more in depth:
 
 | Folder | Motive |
 | ------------- | ------------- |
@@ -114,7 +103,7 @@ Now more in depth:
 | /server  | `Server file that runs cors-anywhere`  |
 
 ### User stories 👤
-Completed / uncompleted user stories or requirements:  
+Completed / uncompleted user stories or requirements:
 
 - [x] 1. As a Reviewer, I want a web application that can show the weather data that is supplied by my server.
 - [x] 2. As a User, I want to see a home screen with all the cities that are available on the API.
@@ -136,15 +125,15 @@ README.md.
 md.
 
 ### Features
-- [ ] Unit testing: after trying many different set-ups using [Jest - Typescript - Nextjs - ESLint], I didn't make it. 
- Resources used: 
+- [ ] Unit testing: after trying many different set-ups using [Jest - Typescript - Nextjs - ESLint], I didn't make it.
+ Resources used:
  - [GitHub - Prottoy2938/nextjs-typescript-eslint-jest-template: Starter Template for Nextjs, TypeScript, ESLint and Jest](https://github.com/Prottoy2938/nextjs-typescript-eslint-jest-template)
 - [Testing with typescript + jest + ts-jest · Issue #8663 · vercel/next.js · GitHub](https://github.com/vercel/next.js/issues/8663)
 - [Jest Typescript: Unit Testing with Typescript and Jest - DEV Community](https://dev.to/muhajirdev/unit-testing-with-typescript-and-jest-2gln)
 - https://medium.com/@benjaminwfox/next-js-setup-config-for-testing-linting-and-absolute-imports-605959d7bd6f
 - [next.js/examples/with-jest at canary · vercel/next.js · GitHub](https://github.com/vercel/next.js/tree/canary/examples/with-jest)
 
-- [ ] Error handling (API error | connection issue). 
+- [ ] Error handling (API error | connection issue).
 Due to a lack of time, I haven't gone through this user story. Feel free to check this project that covers this functionality: [spotify-react-app](https://github.com/MigHerCas/spotify-react-app)
 
 ### Time spent ⏱️
@@ -162,16 +151,15 @@ As this assessment allows to use as much time as desired, I've tried to build a 
 
 ## Things I am more proud of
 
-- Use of utils as the core of the project: this folder contains the most complex part of the project. 
-- Use of Map and Set JS objects. 
-- Clip-path on background image. 
+- Use of utils as the core of the project: this folder contains the most complex part of the project.
+- Use of Map and Set JS objects.
+- Clip-path on background image.
 - More structured design
 - Nice theme switcher
 - Redux-way app state management
 
 ## Author
-Miguel Hernanz 
+Miguel Hernanz
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
