@@ -162,8 +162,7 @@ Due to a lack of time, I haven't gone through this user story. Feel free to chec
 ### Personal comment
 As this assessment allows to use as much time as desired, I tried to build something really cool since that's why I try to do with every assessment that I've completed. In my opinion, I owe this to myself if I always deffend my creativeness during the interviews.
 
-## Things I am more proud of: 
-Things I wanted to try or change: 
+## Things I am more proud of
 
 - Use of utils as the core of the project: this folder contains the most complex part of the project. 
 - Use of Map and Set JS objects. 
@@ -172,7 +171,7 @@ Things I wanted to try or change:
 - Nice theme switcher
 - Redux-way app state management
 
-## Author: 
+## Author
 Miguel Hernanz 
 
 ## License
