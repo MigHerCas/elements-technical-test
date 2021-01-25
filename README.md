@@ -44,7 +44,8 @@ env: {
 This being done, there are only two remaing steps to have our application running 🚀: 
 
 Tab 1 in our terminal: 
-Init a [cors-anywhere](https://github.com/Rob--W/cors-anywhere) instance:
+
+Init a [cors-anywhere](https://github.com/Rob--W/cors-anywhere) instance.
 
 ```bash
 npm run server
