@@ -79,7 +79,7 @@ As I always try to bring my own value or touch to every project I work on, I dec
 
 _⚠️ Please note ⚠️:_
 
-_As this is not a real-life project, the design has established a serie of guidelines such as layout, colors and elements. During development phase, a few things have changed, so take it as a `sandbox` where I've projected my ideas as long as they were popping up in my head._
+_As this is not a real-life project, the design has established a serie of guidelines such as layout, colors and elements. During development phase, a few things have changed, so take it as a `sandbox` where I've projected my ideas while they were popping up._
 
 Built with Figma 
 
@@ -135,7 +135,7 @@ README.md.
 md.
 
 ### Features
-- [ ] Unit testing: after trying many set-ups using: [Jest - Typescript - Nextjs - ESLint], I didn't make it. 
+- [ ] Unit testing: after trying many different set-ups using [Jest - Typescript - Nextjs - ESLint], I didn't make it. 
  Resources used: 
  - [GitHub - Prottoy2938/nextjs-typescript-eslint-jest-template: Starter Template for Nextjs, TypeScript, ESLint and Jest](https://github.com/Prottoy2938/nextjs-typescript-eslint-jest-template)
 - [Testing with typescript + jest + ts-jest · Issue #8663 · vercel/next.js · GitHub](https://github.com/vercel/next.js/issues/8663)
