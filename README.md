@@ -43,7 +43,7 @@ env: {
 
 This being done, there are only two remaing steps to have our application running 🚀: 
 
-Tab 1 in our terminal: 
+[ Tab 1 ] 
 
 Init a [cors-anywhere](https://github.com/Rob--W/cors-anywhere) instance.
 
@@ -52,7 +52,7 @@ npm run server
 # or
 yarn run server
 ```
-Tab 2:
+[ Tab 2 ]
 
 ```bash
 npm run dev
@@ -157,7 +157,7 @@ Due to a lack of time, I haven't gone through this user story. Feel free to chec
 | Documentation  | 2h  |
 
 ### Personal comment
-As this assessment allows to use as much time as desired, I tried to build something really cool since that's why I try to do with every assessment that I've completed. In my opinion, I owe this to myself if I always deffend my creativeness during the interviews.
+As this assessment allows to use as much time as desired, I've tried to build a well-structured application with a fresh design, in order to show the creativeness that I try to achieve as a professional.
 
 ## Things I am more proud of
 
