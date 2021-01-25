@@ -88,10 +88,6 @@ Built with Figma
 
 ### Project architecture 🧰
 
-- `Styling`: SCSS
-- `Main language`: Typescript
-
-
 | Project field | Tech / library used |
 | ------------- | ------------- |
 | Styling  | `scss`  |
