@@ -32,13 +32,14 @@ cp .env.sample .env.local
 Next.js has its own environment variables system, so you need to copy those variables within `next.config.js`
 
 ```js
-// next.js.config
-...
-env: {
-    {VariableName}: {value},
-  },
+// File: next.js.config
+module.exports = {
+     ...
+     env: {
+       {VariableName}: {value},
+     }
+     ...
 }
-...
 ```
 
 This being done, there are only two remaing steps to have our application running 🚀: 
