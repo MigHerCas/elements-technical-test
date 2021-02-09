@@ -1,7 +1,4 @@
-<img src="https://assets.website-files.com/5cd40c117f1ff810bf42803b/5d2f00e046b3c5b7475d4b76_elements_logo_landscape_black_nospacing.svg" align="right"
-     alt="Elements.nl logo" width="220" height="100">
-
-# Elements Candidate Assignment - Frontend
+# Elementss Candidate Assignment - Frontend
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
