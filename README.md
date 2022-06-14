@@ -2,8 +2,11 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![Desktop - Home](https://user-images.githubusercontent.com/29380502/173587233-dd6d9f73-0e53-485b-90d5-92b9be797616.png)
+
 # Pre-requisites 📋
 This project has been built with:
+
 
 - `yarn [1.22.4]`
 - `node [12.19.0]`
